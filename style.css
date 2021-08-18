@@ -1,0 +1,121 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;min-height: 100vh;
+    background: rgba(233, 190, 190, 0.966);
+}
+.container{
+    position: relative;
+    top: 50px;
+}
+.cup{
+    position: relative;
+    width: 280px;
+    height: 300px;
+    background: linear-gradient(to right,#f9f9f9,#d9d9d9);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    
+
+}
+.top{
+    position: absolute;
+    top:-30px ;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right,#f9f9f9,#d9d9d9);
+    border-radius: 50%;
+} 
+.circle{
+position: absolute;
+top: 5px;
+left: 10px;
+width: calc(100% - 20px);
+height: 50px;
+background: linear-gradient(to left,#f9f9f9,#d9d9d9);
+border-radius: 50%;
+box-sizing: border-box;
+overflow: hidden;
+}
+.tea{
+    position:absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(90, 78, 78) , rgb(149, 102, 102) );
+    border-radius: 50%;
+}
+.handel{
+    position: absolute;
+    right: -70px;
+    top: 60px;
+    width: 160px;
+    height: 180px;
+    border: 25px solid #d9d9d9;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-radius: 50%;
+    transform: rotate(40deg);
+
+}
+.plate{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(to right,#dfdfdf,#e7e7e7);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid rgb(134, 134, 134);
+    
+}
+.vapour{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+
+}
+.vapour span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background:#fff;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    filter: blur(6px);
+    animation-delay: calc(var(--i) * -0.5s);
+}
+@keyframes animate 
+{
+    0%
+    {
+     transform: translateY(0)scaleX(1);
+     opacity: 0;
+    }
+    15%{
+         opacity: 1;
+       }   
+ 50%
+    {
+     transform: translateY(-150px)scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%
+    {
+     transform: translateY(-300px)scaleX(10);
+    }
+}
